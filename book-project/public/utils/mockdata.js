@@ -1,4 +1,4 @@
-export const initialBooks = [
+export const Books = [
   {
     id: 1,
     title: 'To Kill a Mockingbird',

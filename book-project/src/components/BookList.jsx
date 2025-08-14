@@ -1,9 +1,11 @@
 import React from "react";
-
-function BookList() {
+import Book from "./Book";
+function BookList(props) {
     return (
-        <div>
-            <h1>BookList component</h1>
+        <div className="bookList">
+            {
+                props.booksdata.map(data => <Book bookDetail= {data}/>)
+            }
         </div>
     )
 }

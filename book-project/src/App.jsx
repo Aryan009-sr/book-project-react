@@ -2,12 +2,14 @@
 import React, { useState } from "react";
 import { Link, Outlet } from 'react-router-dom';
 import userContext from "../public/utils/userContext";
+import Provider from 'react-redux';
+import AppStore from "../public/utils/appStore";
 
 function App() {
 const [userName, setUserName] = useState("Aryan singh Rajput");
 
-  return (
-    <>
+  return (    
+    <Provider store={AppStore}>
       <div className="Header">
         <h1>Book Management App</h1>
         <ul className="nav-ul">
@@ -23,8 +25,7 @@ const [userName, setUserName] = useState("Aryan singh Rajput");
         <main className="app-body">
         <Outlet />
       </main>
-      
-    </>
+    </Provider>
   );
 }
 
